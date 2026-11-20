@@ -1,0 +1,74 @@
+/* Notely semantic design tokens: v2.0.12. Loaded before styles.css. */
+:root {
+  --font-ui: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --radius-sm: 6px;
+  --radius-md: 9px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --control-sm: 32px;
+  --control-md: 38px;
+  --control-lg: 40px;
+  /* Shared type rhythm across popup, side panel and full workspace. */
+  --text-xs: 11px;
+  --text-sm: 12px;
+  --text-base: 14px;
+  --text-editor: 14px;
+  --text-title: 30px;
+  --leading-tight: 1.35;
+  --leading-normal: 1.5;
+  --leading-reading: 1.75;
+  --weight-medium: 600;
+  --weight-semibold: 700;
+  --component-gap: var(--space-2);
+  --component-inset: var(--space-3);
+  --sidebar-inset: var(--space-4);
+  --icon-md: 18px;
+  --duration-fast: 120ms;
+  --duration-normal: 150ms;
+  /* Event-driven motion only; no perpetual animation or retained GPU layers. */
+  --motion-fast: 110ms;
+  --motion-standard: 160ms;
+  --motion-enter: 190ms;
+  --motion-ease: cubic-bezier(.2,.7,.2,1);
+  --focus-width: 2px;
+}
+
+body[data-theme="dark"] {
+  --color-bg: #111417;
+  --color-surface: #171b1e;
+  --color-surface-hover: #22282b;
+  --color-border: #30373b;
+  --color-text: #f1f3ef;
+  --color-muted: #a4ada9;
+  --color-faint: #77837e;
+  --color-accent: #bfdf87;
+  --color-accent-text: #23301a;
+  --color-danger: #f28b8c;
+  --color-shadow: rgba(0,0,0,.34);
+  --color-field: #1c2124;
+  --color-selected: #29362b;
+  --color-divider: #2b3235;
+}
+
+body[data-theme="light"] {
+  --color-bg: #fafbf8;
+  --color-surface: #f1f3ee;
+  --color-surface-hover: #e7ebe4;
+  --color-border: #d9ded6;
+  --color-text: #202923;
+  --color-muted: #58675e;
+  --color-faint: #75847a;
+  --color-accent: #315c3b;
+  --color-accent-text: #fff;
+  --color-danger: #b63d48;
+  --color-shadow: rgba(22,38,27,.12);
+  --color-field: #fff;
+  --color-selected: #e1ebdd;
+  --color-divider: #e0e5dd;
+}

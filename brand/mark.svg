@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Notely mark">
+<rect width="128" height="128" rx="30" fill="#151A1D"/>
+<path d="M35 92V39c0-3 2-5 5-5h39l14 14v44c0 3-2 5-5 5H40c-3 0-5-2-5-5Z" fill="#F4F5EF"/>
+<path d="M79 34v14h14" fill="#CDE98B" stroke="#151A1D" stroke-width="2" stroke-linejoin="round"/>
+<path d="M49 78V55l15 23V55" fill="none" stroke="#222B24" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="80" cy="78" r="5" fill="#8CBF57"/>
+</svg>

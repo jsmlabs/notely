@@ -1,0 +1,4 @@
+
+> notely-clean-notes@2.0.17 check
+> node --check popup.js && node --check import-selection.mjs && node --check import-preview-guard.mjs && node --check sidepanel.mjs && node --check navigation.mjs && node --check note-list-focus.mjs && node --check core.mjs && node --check storage-queue.mjs && node --check markdown.mjs && node --check editor-format.mjs && node --check backup.mjs && node --check background.js && node --check coordinator.mjs && node --check draft-recovery.mjs && node --check source-url.mjs
+

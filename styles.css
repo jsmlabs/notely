@@ -1,0 +1,460 @@
+:root{font-family:var(--font-ui);font-synthesis:none;-webkit-font-smoothing:antialiased}*{box-sizing:border-box}body{margin:0;min-width:300px}button,input,textarea{font:inherit}button{cursor:pointer}button:focus-visible,input:focus-visible,textarea:focus-visible{outline:2px solid var(--accent);outline-offset:3px}svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}.svg-defs{position:absolute;width:0;height:0;overflow:hidden}body{background:var(--bg);color:var(--text)}.app{display:grid;grid-template-columns:minmax(280px,330px) minmax(0,1fr);height:100dvh;overflow:hidden}.sidebar{background:var(--surface);border-right:1px solid var(--border);display:flex;flex-direction:column;min-height:0}.sidebar-top{height:90px;display:flex;align-items:center;justify-content:space-between;padding:0 24px}.branding{display:flex;align-items:center;gap:11px;font-weight:750;letter-spacing:-1.1px;font-size:23px}.brand-period{color:var(--accent)}.brand-icon{display:grid;place-items:center;width:32px;height:32px;background:var(--accent);color:var(--accent-text);border-radius:10px}.brand-icon svg{width:19px;height:19px}.icon-button{border:0;background:transparent;color:var(--muted);width:36px;height:36px;display:grid;place-items:center;border-radius:10px;transition:background .15s,color .15s}.icon-button:hover{background:var(--surface-hover);color:var(--text)}.library-label{display:flex;justify-content:space-between;align-items:center;padding:9px 24px 17px;font-size:10px;font-weight:750;letter-spacing:1.5px;color:var(--muted)}.notes-count{letter-spacing:0;font-size:11px;font-weight:500;text-transform:none}.create-button{border:0;border-radius:11px;margin:0 17px 19px;background:var(--accent);color:var(--accent-text);height:46px;display:flex;align-items:center;gap:10px;padding:0 14px;font-weight:750;font-size:13px}.create-button:hover,.empty-create:hover{filter:brightness(.94)}.create-button svg{width:17px}.shortcut{margin-left:auto;opacity:.65;font-size:10px;font-weight:600}.search-wrap{height:42px;margin:0 17px 27px;border:1px solid var(--border);border-radius:10px;display:flex;align-items:center;gap:10px;padding:0 12px;color:var(--faint)}.search-wrap:focus-within{border-color:var(--muted)}.search-wrap svg{width:16px}.search-wrap input{min-width:0;width:100%;color:var(--text);background:transparent;border:0;outline:0;font-size:12px}.search-wrap input::placeholder{color:var(--faint)}.search-key{font-size:11px;border:1px solid var(--border);padding:0 6px;border-radius:4px}.section-label{font-size:10px;font-weight:750;letter-spacing:1.3px;color:var(--faint);padding:0 24px 12px;display:flex;gap:7px}.note-list{padding:0 11px 14px;min-height:0;flex:1;overflow-y:auto;scrollbar-color:var(--border) transparent;scrollbar-width:thin}.note-card{border:1px solid transparent;border-radius:11px;text-align:left;background:transparent;color:var(--text);width:100%;display:block;padding:15px 13px 13px;margin-bottom:5px}.note-card:hover{background:var(--surface-hover)}.note-card.active{background:var(--surface-hover);border-color:var(--border)}.note-card-top{display:flex;align-items:center;gap:7px}.note-card-title{font-size:13px;font-weight:680;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;flex:1}.note-card-pin{color:var(--accent);width:13px;height:13px}.note-card-preview{font-size:11.5px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin-top:8px;line-height:1.5}.note-card-meta{font-size:10px;color:var(--faint);margin-top:12px}.list-empty{padding:32px 10px;text-align:center;color:var(--muted);font-size:12px;line-height:1.7}.sidebar-footer{font-size:10.5px;color:var(--faint);padding:19px 24px;border-top:1px solid var(--border);display:flex;gap:9px;align-items:center}.privacy-dot{height:6px;width:6px;background:var(--accent);border-radius:50%}.editor-area{display:flex;min-width:0;min-height:0;position:relative}.editor-empty{margin:auto;max-width:330px;text-align:center;padding:24px}.empty-illustration{height:70px;width:70px;display:grid;place-items:center;border:1px solid var(--border);background:var(--surface);border-radius:20px;margin:0 auto 23px;color:var(--accent)}.empty-illustration svg{width:30px;height:30px}.editor-empty h1{font-size:22px;letter-spacing:-.75px;font-weight:700;margin:0 0 12px}.editor-empty p{font-size:13px;line-height:1.7;color:var(--muted);margin:0 0 22px}.empty-create{background:var(--accent);color:var(--accent-text);border:0;border-radius:9px;padding:12px 17px;font-weight:750;font-size:12px;display:inline-flex;align-items:center;gap:8px}.empty-create svg{width:15px;height:15px}.editor{height:100%;display:flex;flex-direction:column;min-width:0;width:100%}.editor[hidden],.editor-empty[hidden]{display:none}.editor-toolbar{height:75px;display:flex;align-items:center;gap:11px;border-bottom:1px solid var(--border);padding:0 25px;flex-shrink:0}.editor-location{font-size:10px;font-weight:750;letter-spacing:1.2px;color:var(--faint)}.editor-location span{padding:0 6px;color:var(--border)}.toolbar-actions{margin-left:auto;display:flex;gap:7px}.toolbar-actions .icon-button[aria-pressed="true"]{color:var(--accent)}.trash-button:hover{color:var(--danger)}.back-button{display:none}.editor-content{width:min(100%,780px);padding:48px clamp(25px,6%,75px) 20px;display:flex;flex-direction:column;min-height:0;flex:1;margin:0 auto}.note-date{font-size:11px;font-weight:650;letter-spacing:1px;text-transform:uppercase;color:var(--faint);margin-bottom:23px}.title-input{width:100%;border:0;outline:0;color:var(--text);background:transparent;font-size:clamp(27px,4vw,39px);font-weight:740;letter-spacing:-1.3px;line-height:1.3;margin-bottom:24px}.title-input::placeholder{color:var(--faint)}.body-input{min-height:0;flex:1;background:transparent;border:0;outline:0;color:var(--text);resize:none;width:100%;line-height:1.85;font-size:14px;letter-spacing:.05px;scrollbar-color:var(--border) transparent}.body-input::placeholder{color:var(--faint)}.editor-footer{height:53px;border-top:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;padding:0 28px;color:var(--faint);font-size:11px;flex-shrink:0}.save-status{display:flex;align-items:center;gap:7px}.save-status svg{height:13px;width:13px;color:var(--accent)}.save-status[data-state="error"]{color:var(--danger)}.save-status[data-state="error"] svg{color:var(--danger)}dialog{border:1px solid var(--border);border-radius:14px;max-width:min(340px,calc(100vw - 32px));width:100%;background:var(--surface);color:var(--text);padding:25px;box-shadow:0 24px 70px var(--shadow)}dialog::backdrop{background:rgba(0,0,0,.65)}dialog h2{font-size:17px;margin:0 0 8px}dialog p{font-size:12px;color:var(--muted);margin:0 0 25px}.dialog-buttons{display:flex;justify-content:flex-end;gap:9px}.dialog-buttons button{padding:10px 13px;border-radius:8px;font-size:12px;font-weight:650}.cancel-button{background:transparent;color:var(--text);border:1px solid var(--border)}.danger-button{background:var(--danger);color:#16090a;border:0}.notice{position:fixed;bottom:65px;right:18px;background:var(--surface);border:1px solid var(--danger);color:var(--text);padding:13px 16px;border-radius:9px;font-size:12px;max-width:calc(100vw - 36px);z-index:20}.notice[hidden]{display:none}@media(max-width:680px){.app{display:block}.sidebar,.editor-area{width:100%;height:100dvh}.app[data-view="list"] .editor-area{display:none}.app[data-view="editor"] .sidebar{display:none}.back-button{display:grid}.editor-toolbar{height:64px;padding:0 17px}.editor-content{padding:35px 25px 15px}.title-input{font-size:30px}.sidebar-top{height:83px}}@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+
+/* Browser-action popup: fixed, bounded dimensions with one screen visible at a time. */
+html,body{width:400px;height:580px;min-width:400px;overflow:hidden}
+.app{display:block;width:400px;height:580px}
+.sidebar,.editor-area{width:100%;height:580px}
+.app[data-view="list"] .editor-area{display:none}
+.app[data-view="editor"] .sidebar{display:none}
+.back-button{display:grid}
+.sidebar-top{height:75px}
+.editor-toolbar{height:62px;padding:0 17px}
+.editor-content{padding:26px 24px 12px}
+.title-input{font-size:28px}
+.sidebar-footer{padding:13px 22px}
+
+/* v1.2: popup resilience, status visibility and keyboard controls */
+html,body,.app{width:min(400px,100vw);min-width:300px;max-width:400px}
+.sidebar,.editor-area{height:100%;min-width:0}
+.sidebar-footer{gap:10px;justify-content:space-between;white-space:nowrap;min-width:0}
+.sidebar-footer .save-status{min-width:0;overflow:hidden;text-overflow:ellipsis}
+.privacy-note{margin-left:auto;color:var(--faint)}
+.retry-button,.undo-button{color:var(--accent);border:1px solid var(--border);background:transparent;border-radius:6px;padding:5px 9px;font-size:11px;font-weight:700}
+.retry-button:hover,.undo-button:hover{background:var(--surface-hover)}
+.retry-button[hidden],.undo-button[hidden]{display:none}
+.save-status[data-state="saving"]{color:var(--muted)}
+.save-status[data-state="error"]{color:var(--danger);font-weight:700}
+.notice{display:flex;align-items:center;gap:10px;justify-content:space-between;left:14px;right:14px;max-width:none;bottom:58px;box-shadow:0 12px 36px var(--shadow)}
+.notice[hidden]{display:none}
+.note-card-title,.note-card-preview,.title-input{overflow-wrap:anywhere}
+.editor-content{overflow:hidden}
+.body-input{overflow-wrap:anywhere}
+@media(max-width:340px){.sidebar-top{padding:0 16px}.library-label{padding-left:17px;padding-right:17px}.sidebar-footer{padding:12px 14px}.editor-content{padding-left:17px;padding-right:17px}.editor-location{font-size:9px}}
+
+/* v1.3 - compact, accessible organization controls */
+.filters{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:8px;margin:0 17px 20px}
+.filter-field{display:flex;flex-direction:column;gap:5px;font-size:10px;color:var(--muted);font-weight:650;min-width:0}
+.filter-field select{width:100%;height:35px;min-width:0;border-radius:8px;border:1px solid var(--border);color:var(--text);background:var(--bg);padding:0 8px;font-size:11px}
+.filter-field select:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.filter-toggle{height:35px;align-self:end;display:flex;gap:7px;align-items:center;justify-content:center;border:1px solid var(--border);border-radius:8px;background:var(--bg);color:var(--muted);font-size:11px;font-weight:650}
+.filter-toggle svg{height:14px;width:14px}
+.filter-toggle[aria-pressed="true"]{color:var(--accent);border-color:var(--accent)}
+.note-card-favorite{color:var(--accent);width:14px;height:14px}
+.card-tags{display:flex;gap:5px;flex-wrap:wrap;margin-top:9px}
+.card-tags span{max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:10px;padding:3px 6px;color:var(--muted);background:var(--bg);border:1px solid var(--border);border-radius:5px}
+.tag-editor{margin-bottom:14px;display:flex;flex-wrap:wrap;align-items:center;gap:6px;flex-shrink:0;max-height:125px;overflow-y:auto}
+.tag-chips{display:flex;flex-wrap:wrap;gap:6px}
+.tag-chip{display:flex;align-items:center;gap:4px;border-radius:6px;background:var(--surface-hover);color:var(--text);padding:4px 5px 4px 9px;font-size:11px;max-width:100%;overflow-wrap:anywhere}
+.remove-tag{display:grid;place-items:center;background:transparent;border:0;color:var(--muted);width:19px;height:19px;border-radius:4px;padding:2px}
+.remove-tag:hover{color:var(--danger);background:var(--surface)}
+.remove-tag svg{width:12px;height:12px}
+.tag-entry{display:flex;align-items:center;gap:6px;color:var(--faint);font-size:11px}
+.tag-entry input{border:1px solid var(--border);background:transparent;color:var(--text);border-radius:6px;padding:6px 7px;font-size:11px;width:136px;max-width:100%}
+.tag-entry input:disabled{opacity:.6}
+@media(max-width:340px){.filters{margin-left:12px;margin-right:12px;gap:6px}.filter-field select{font-size:10px}}
+
+/* v1.4: compact Markdown controls and a scrollable, safely rendered preview. */
+.writing-toolbar{display:flex;flex-wrap:wrap;align-items:center;gap:3px;padding:6px 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);margin:2px 0 9px;flex-shrink:0}
+.writing-toolbar button{background:transparent;border:0;border-radius:6px;color:var(--muted);font-size:11px;min-height:27px;min-width:26px;padding:3px 6px}
+.writing-toolbar button:hover:not(:disabled),.writing-toolbar button[aria-pressed="true"]{background:var(--surface-hover);color:var(--text)}
+.writing-toolbar button:disabled{opacity:.4;cursor:default}
+.writing-toolbar .preview-toggle{margin-left:auto;border:1px solid var(--border);font-weight:650;padding:3px 8px}
+.body-workspace{display:flex;flex:1;min-height:0;min-width:0}
+.body-input[hidden],.markdown-preview[hidden]{display:none!important}
+.body-workspace>.body-input{height:100%;flex:1}
+.markdown-preview{min-height:0;height:100%;width:100%;overflow:auto;overflow-wrap:anywhere;white-space:normal;font-size:13px;line-height:1.75;color:var(--text);padding-bottom:12px}
+.markdown-preview h1{font-size:22px}.markdown-preview h2{font-size:18px}.markdown-preview h3{font-size:15px}
+.markdown-preview h1,.markdown-preview h2,.markdown-preview h3{margin:12px 0 5px;line-height:1.35}
+.markdown-preview p{margin:4px 0 8px;white-space:pre-wrap}
+.markdown-preview .preview-bullet,.markdown-preview .preview-number{padding-left:13px;margin:3px 0}
+.markdown-preview .preview-bullet::before{content:'•';margin-right:9px;color:var(--accent)}
+.markdown-preview blockquote{border-left:2px solid var(--accent);padding:2px 0 2px 12px;margin:8px 0;color:var(--muted)}
+.markdown-preview a{color:var(--accent);text-decoration:underline;text-underline-offset:3px}
+.markdown-preview code{background:var(--surface-hover);padding:2px 4px;border-radius:4px;white-space:pre-wrap}
+.markdown-preview pre{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:10px;overflow:auto}
+.markdown-preview pre code{background:transparent;padding:0}
+.preview-task{display:flex;align-items:flex-start;gap:9px;margin:5px 0;cursor:pointer;overflow-wrap:anywhere}
+.preview-task input{margin:5px 0 0;accent-color:var(--accent);flex-shrink:0}
+.preview-task input:checked+span{color:var(--muted);text-decoration:line-through}
+@media(max-width:340px){.writing-toolbar{gap:1px}.writing-toolbar button{font-size:10px;min-width:23px;padding:3px 4px}}
+
+/* v1.5: local backup and restore dialogs. */
+.backup-link{background:transparent;color:var(--muted);border:0;font-size:11px;font-weight:650;padding:6px;border-radius:6px;white-space:nowrap}
+.backup-link:hover{color:var(--text);background:var(--surface-hover)}
+.backup-dialog{max-height:min(540px,calc(100dvh - 24px));overflow-y:auto;padding:20px;width:min(375px,calc(100vw - 20px))}
+.backup-header{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.backup-header h2{margin:0}
+.backup-dialog p{margin:8px 0 16px;line-height:1.5}
+.backup-dialog .backup-divider{height:1px;background:var(--border);margin:19px 0}
+.backup-primary{border:0;border-radius:9px;background:var(--accent);color:var(--accent-text);font-size:12px;font-weight:750;padding:11px 14px;width:100%}
+.backup-primary:disabled{opacity:.45;cursor:not-allowed}
+.backup-label{display:block;font-size:11px;font-weight:700;color:var(--muted);margin:13px 0 7px}
+.backup-dialog input[type="file"],.backup-dialog select{max-width:100%;width:100%;font-size:11px;color:var(--text);background:var(--bg);border:1px solid var(--border);border-radius:7px;padding:9px}
+.backup-dialog input[type="file"]::file-selector-button{color:var(--text);background:var(--surface-hover);border:1px solid var(--border);border-radius:5px;padding:5px;margin-right:7px}
+.backup-dialog .import-summary,.backup-dialog .import-result{font-size:11px;overflow-wrap:anywhere;color:var(--muted);margin:9px 0}
+.backup-dialog .import-result[data-error="true"]{color:var(--danger)}
+.backup-dialog .replace-confirm{display:flex;gap:8px;align-items:flex-start;color:var(--danger);font-size:11px;line-height:1.5;margin:12px 0}
+.backup-dialog .replace-confirm[hidden]{display:none}
+.backup-dialog .replace-confirm input{flex-shrink:0;margin-top:2px}
+.sidebar-footer .backup-link{margin-left:auto}.sidebar-footer .privacy-note{display:none}
+
+/* v1.6 - Quick Capture controls, metadata without active links. */
+.quick-note-button{margin:-12px 17px 16px;height:31px;background:transparent;border:1px solid var(--border);border-radius:8px;color:var(--muted);font-size:11px;font-weight:650}
+.quick-note-button:hover{background:var(--surface-hover);color:var(--text)}
+.source-info{font-size:10px;color:var(--muted);border-left:2px solid var(--accent);padding:5px 9px;margin:2px 0 12px;overflow-wrap:anywhere;max-height:62px;overflow-y:auto}
+.source-info[hidden]{display:none}
+.capture-setting{display:flex;gap:9px;align-items:center;color:var(--muted);font-size:11px;line-height:1.4}
+.capture-setting input{accent-color:var(--accent)}
+
+/* Full-tab workspace reuses the same markup, editor and storage coordinator. */
+.header-actions{display:flex;align-items:center;gap:2px}
+html:has(body.workspace){width:100%;min-width:320px;max-width:none;height:100dvh;overflow:hidden}
+body.workspace{min-width:320px}
+body.workspace,.workspace .app{width:100%;max-width:none;height:100dvh}
+.workspace .app{display:grid;grid-template-columns:clamp(280px,28vw,360px) minmax(0,1fr);overflow:hidden}
+.workspace .sidebar,.workspace .editor-area{height:100%;min-height:0;display:flex}
+.workspace .sidebar{flex-direction:column}
+.workspace .editor-area{min-width:0}
+.workspace .back-button{display:none}
+.workspace .editor-content{padding:48px clamp(25px,6%,75px) 20px}
+.workspace .title-input{font-size:clamp(27px,4vw,39px)}
+.workspace #workspace-open{display:none}
+@media(max-width:700px){
+  .workspace .app{display:block}
+  .workspace .sidebar,.workspace .editor-area{width:100%;height:100dvh}
+  .workspace .app[data-view="list"] .editor-area{display:none}
+  .workspace .app[data-view="editor"] .sidebar{display:none}
+  .workspace .back-button{display:grid}
+  .workspace .editor-content{padding:30px 22px 12px}
+}
+
+.clear-filters{margin-left:auto;border:0;background:transparent;color:var(--muted);font:inherit;letter-spacing:0;text-transform:none;cursor:pointer}
+.clear-filters:hover{color:var(--text)}
+.clear-filters[hidden]{display:none}
+
+/* v1.8: native Chrome Side Panel, reusing the single-screen popup flow. */
+html:has(body.sidepanel),body.sidepanel{width:100%;min-width:0;max-width:none;height:100dvh;overflow:hidden}
+.sidepanel .app{width:100%;min-width:0;max-width:none;height:100dvh}
+.sidepanel .sidebar,.sidepanel .editor-area{height:100%;min-width:0}
+.sidepanel .app[data-view="list"] .editor-area{display:none}
+.sidepanel .app[data-view="editor"] .sidebar{display:none}
+.sidepanel .back-button{display:grid}
+.sidepanel #sidepanel-open{display:none}
+.sidepanel .sidebar-top{padding-inline:clamp(12px,5vw,24px)}
+.sidepanel .editor-content{padding:24px clamp(14px,5vw,24px) 12px}
+.sidepanel .editor-toolbar{padding-inline:clamp(10px,4vw,17px)}
+@media(max-width:340px){.sidepanel .sidebar-top{padding-inline:10px}.sidepanel .branding{font-size:20px;gap:7px}.sidepanel .sidebar-footer{padding-inline:10px}.sidepanel .filters{margin-inline:10px}}
+
+
+/* v1.9: focus writing, draggable + keyboard-resizable workspace sidebar, recovery prompt. */
+body.workspace{--sidebar-width:340px}
+.workspace .app{grid-template-columns:var(--sidebar-width,340px) 6px minmax(0,1fr)}
+.sidebar-resize{display:none}
+.workspace .sidebar-resize{display:block;background:var(--border);cursor:col-resize;touch-action:none;position:relative;z-index:3}
+.workspace .sidebar-resize:hover,.workspace .sidebar-resize:focus-visible{background:var(--accent);outline:none}
+.focus-toggle{border:1px solid var(--border);background:transparent;color:var(--muted);font-size:11px;font-weight:700;border-radius:6px;padding:6px 9px}
+.focus-toggle[aria-pressed="true"]{color:var(--accent);border-color:var(--accent)}
+body:not(.workspace) .focus-toggle{display:none}
+.workspace.focus-mode .app{grid-template-columns:minmax(0,1fr)}
+.workspace.focus-mode .sidebar,.workspace.focus-mode .sidebar-resize{display:none}
+.workspace.focus-mode .editor-content{margin:0 auto}
+.workspace.focus-mode .editor-area{width:100%}
+.recovery-banner{position:fixed;z-index:15;top:12px;left:12px;right:12px;max-width:580px;margin-inline:auto;background:var(--surface);color:var(--text);border:1px solid var(--accent);border-radius:10px;padding:12px 14px;box-shadow:0 8px 32px var(--shadow);font-size:12px;line-height:1.4}
+.recovery-banner[hidden]{display:none}
+.recovery-actions{display:flex;gap:8px;margin-top:9px}
+.recovery-actions button{padding:7px 10px;border:1px solid var(--border);background:var(--surface-hover);color:var(--text);border-radius:6px;font-size:11px}
+.recovery-actions button:first-child{background:var(--accent);color:var(--accent-text)}
+@media(max-width:700px){.workspace .sidebar-resize{display:none}.workspace.focus-mode .back-button{display:grid}}
+/* The popup's single-view selectors must not hide desktop workspace columns. */
+@media(min-width:701px){
+ .workspace:not(.focus-mode) .app[data-view="editor"] .sidebar{display:flex}
+ .workspace:not(.focus-mode) .app[data-view="list"] .editor-area{display:flex}
+}
+
+/* v1.9.3: notes-first popup hierarchy. Keep filters discoverable, not permanently in the way. */
+.filter-disclosure{margin:0 17px 8px;flex:0 0 auto;min-width:0}
+.filter-disclosure>summary{list-style:none;display:flex;align-items:center;justify-content:space-between;gap:8px;min-height:32px;padding:0 11px;border:1px solid var(--border);border-radius:8px;color:var(--muted);font-size:11px;font-weight:650;cursor:pointer;user-select:none}
+.filter-disclosure>summary::-webkit-details-marker{display:none}
+.filter-disclosure>summary:hover{background:var(--surface-hover);color:var(--text)}
+.filter-disclosure>summary:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.filter-chevron{width:7px;height:7px;transform:rotate(45deg);border-bottom:1.5px solid currentColor;border-right:1.5px solid currentColor;transition:transform .15s ease;margin-right:3px}
+.filter-disclosure[open] .filter-chevron{transform:rotate(225deg)}
+.filter-disclosure .filters{margin:10px 0 5px;gap:8px}
+/* Scope the compact mode to the popup and side panel; preserve the full workspace. */
+body:not(.workspace) .sidebar-top{height:61px;flex-shrink:0}
+body:not(.workspace) .library-label{padding-top:5px;padding-bottom:9px;flex-shrink:0}
+body:not(.workspace) .create-button{height:42px;margin-bottom:12px;flex-shrink:0}
+body:not(.workspace) .quick-note-button{height:29px;margin-top:-6px;margin-bottom:12px;flex-shrink:0}
+body:not(.workspace) .search-wrap{height:39px;margin-bottom:11px;flex-shrink:0}
+body:not(.workspace) .section-label{padding:7px 22px 10px;flex-shrink:0}
+body:not(.workspace) .note-list{min-height:0;flex:1 1 auto;overflow-y:auto;overscroll-behavior:contain}
+body:not(.workspace) .sidebar-footer{flex-shrink:0}
+body:not(.workspace) .list-empty{padding:25px 10px}
+@media(max-width:340px){.filter-disclosure{margin-inline:10px}}
+@media(prefers-reduced-motion:reduce){.filter-chevron{transition:none}}
+
+/* Preserve both capture actions while reducing them to one compact row. */
+body:not(.workspace) .capture-actions{display:flex;gap:7px;margin:0 17px 12px;min-width:0;flex-shrink:0}
+body:not(.workspace) .capture-actions .create-button{flex:1 1 auto;min-width:0;margin:0;height:42px;padding-inline:12px}
+body:not(.workspace) .capture-actions .quick-note-button{flex:0 0 auto;margin:0;padding-inline:12px;height:42px;white-space:nowrap}
+/* The workspace retains the original vertical capture-action arrangement. */
+.workspace .capture-actions{display:flex;flex-direction:column;align-items:stretch}
+
+/* v2.0 - cohesive Notely interface system. Shared across popup, side panel and workspace. */
+:root{font-size:14px}
+body[data-theme="dark"]{--bg:var(--color-bg);--surface:var(--color-surface);--surface-hover:var(--color-surface-hover);--border:var(--color-border);--text:var(--color-text);--muted:var(--color-muted);--faint:var(--color-faint);--accent:var(--color-accent);--accent-text:var(--color-accent-text);--danger:var(--color-danger);--shadow:var(--color-shadow);--field:var(--color-field);--selected:var(--color-selected);--divider:var(--color-divider)}
+body[data-theme="light"]{--bg:var(--color-bg);--surface:var(--color-surface);--surface-hover:var(--color-surface-hover);--border:var(--color-border);--text:var(--color-text);--muted:var(--color-muted);--faint:var(--color-faint);--accent:var(--color-accent);--accent-text:var(--color-accent-text);--danger:var(--color-danger);--shadow:var(--color-shadow);--field:var(--color-field);--selected:var(--color-selected);--divider:var(--color-divider)}
+body{font-size:13px;line-height:1.45}
+button,input,textarea,select{font:inherit}
+button{transition:background-color var(--duration-normal) ease,border-color var(--duration-normal) ease,color var(--duration-normal) ease}
+button:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible{outline:var(--focus-width) solid var(--accent);outline-offset:2px}
+.icon-button{width:34px;height:34px;border-radius:var(--radius-md);color:var(--muted)}
+.icon-button svg{width:17px;height:17px}
+.icon-button:hover{color:var(--text)}
+.icon-button[aria-pressed="true"]{background:var(--selected);color:var(--text)}
+.sidebar{background:var(--surface);border-right:1px solid var(--divider)}
+.sidebar-top{height:67px;padding:0 17px;flex-shrink:0;gap:8px}
+.branding{font-size:21px;letter-spacing:-1px;gap:9px;white-space:nowrap}
+.brand-icon{width:30px;height:30px;border-radius:var(--radius-md)}
+.brand-icon svg{width:17px;height:17px}
+.brand-period{color:var(--accent)}
+.header-actions{gap:0;flex-shrink:0}
+.library-label{padding:8px 19px 10px;font-size:10px;letter-spacing:1.05px;color:var(--faint)}
+.notes-count{color:var(--muted);font-size:11px}
+.capture-actions{min-width:0}
+.create-button,.quick-note-button,.empty-create,.backup-primary{transition:background-color var(--duration-normal) ease,filter var(--duration-normal) ease}
+.create-button{height:39px;border-radius:var(--radius-md);padding-inline:13px;font-size:12px;margin:0 14px 9px;gap:9px}
+.create-button:hover,.empty-create:hover,.backup-primary:hover:not(:disabled){filter:brightness(.92)}
+.create-button .shortcut{font-size:10px;font-weight:600}
+.quick-note-button{border-radius:var(--radius-md);color:var(--text);font-size:11px}
+.search-wrap{height:38px;margin:0 14px 12px;background:var(--field);border-color:var(--border);border-radius:var(--radius-md);transition:border-color var(--duration-normal)}
+.search-wrap:focus-within{border-color:var(--accent)}
+.search-wrap input{font-size:12px}
+.search-key{min-width:17px;text-align:center;font-size:10px;line-height:18px;padding:0 4px}
+.filter-disclosure{margin:0 14px 10px}
+.filter-disclosure>summary{min-height:33px;font-size:11px;padding-inline:11px;border-radius:var(--radius-md)}
+.filter-disclosure[open]>summary{background:var(--field)}
+.section-label{padding:10px 19px 8px;font-size:10px;letter-spacing:1.15px}
+.note-list{padding:0 9px 12px;overscroll-behavior:contain}
+.note-card{padding:11px 11px 10px;margin:0 0 3px;border-radius:var(--radius-md);transition:background var(--duration-fast),border-color var(--duration-fast)}
+.note-card.active{background:var(--selected);border-color:var(--border)}
+.note-card:focus-visible{outline-offset:-2px}
+.note-card-title{font-size:12px;line-height:1.4;font-weight:690}
+.note-card-preview{font-size:11px;line-height:1.4;margin-top:4px}
+.note-card-meta{font-size:10px;margin-top:7px}
+.card-tags{margin-top:7px}
+.card-tags span{background:var(--field);border-color:var(--divider);border-radius:5px}
+.list-empty{padding:35px 15px;text-align:center;line-height:1.65;color:var(--muted)}
+.sidebar-footer{min-height:48px;padding:10px 17px;color:var(--muted);border-color:var(--divider)}
+.sidebar-footer .save-status svg{color:var(--accent)}
+.backup-link{color:var(--muted);font-size:11px}
+.editor-area{background:var(--bg)}
+.editor-toolbar{height:62px;padding:0 24px;border-color:var(--divider)}
+.editor-location{font-size:10px;letter-spacing:1px;color:var(--muted)}
+.editor-content{width:min(100%,900px);padding:43px clamp(24px,5vw,66px) 22px;overflow:hidden}
+.note-date{font-size:10px;letter-spacing:1.1px;margin-bottom:17px;color:var(--faint)}
+.title-input{font-size:clamp(28px,3vw,37px);letter-spacing:-1.25px;font-weight:720;line-height:1.2;margin-bottom:20px;min-height:42px}
+.title-input:focus-visible,.body-input:focus-visible{outline:none}
+.title-input::placeholder,.body-input::placeholder{color:var(--faint);opacity:1}
+.tag-editor{margin-bottom:15px;gap:8px;max-height:100px}
+.tag-entry{font-size:11px;gap:9px}
+.tag-entry input{background:var(--field);border-radius:7px;min-height:31px;padding:6px 9px;width:146px}
+.tag-chip{border:1px solid var(--border);border-radius:7px;background:var(--surface);padding-block:4px}
+.writing-toolbar{gap:3px;padding:6px 0;margin:0 0 14px;border-color:var(--divider)}
+.writing-toolbar button{min-height:30px;min-width:29px;border-radius:7px;font-size:11px;padding:4px 7px;color:var(--muted)}
+.writing-toolbar button:hover:not(:disabled){background:var(--surface-hover);color:var(--text)}
+.writing-toolbar .preview-toggle{border-radius:7px;padding-inline:10px;color:var(--text)}
+.body-input{font-size:13px;line-height:1.8;letter-spacing:0}
+.markdown-preview{font-size:13px;line-height:1.75}
+.editor-footer{height:49px;border-color:var(--divider);padding:0 20px;gap:8px}
+.editor-footer .backup-link{font-size:10px;letter-spacing:.15px}
+.editor-empty{max-width:350px;padding:28px 22px}
+.empty-illustration{width:50px;height:50px;border-radius:14px;margin-bottom:17px;background:var(--surface);color:var(--accent)}
+.empty-illustration svg{width:23px;height:23px}
+.editor-empty h1{font-size:19px;letter-spacing:-.6px;margin-bottom:7px}
+.editor-empty p{font-size:12px;line-height:1.65;margin-bottom:19px}
+.empty-create{font-size:12px;border-radius:var(--radius-md);padding:10px 14px}
+dialog{background:var(--surface);border-color:var(--border);box-shadow:0 24px 70px var(--shadow)}
+.backup-dialog{border-radius:13px}
+.backup-dialog input[type="file"],.backup-dialog select{background:var(--field)}
+.recovery-banner{border-color:var(--border)}
+@media (prefers-reduced-motion:reduce){button,.note-card,.search-wrap{transition:none}}
+
+/* Compact action row and vertical rhythm in browser popup and side panel. */
+body:not(.workspace) .sidebar-top{height:62px;padding-inline:14px}
+body:not(.workspace) .library-label{padding:5px 16px 10px}
+body:not(.workspace) .capture-actions{margin:0 14px 12px;gap:7px}
+body:not(.workspace) .capture-actions .create-button{height:40px;margin:0;min-width:0}
+body:not(.workspace) .capture-actions .quick-note-button{height:40px;margin:0;padding-inline:13px}
+body:not(.workspace) .search-wrap{height:39px;margin-bottom:11px}
+body:not(.workspace) .section-label{padding:8px 16px 8px}
+body:not(.workspace) .sidebar-footer{padding:9px 15px}
+body:not(.workspace) .editor-toolbar{height:58px;padding-inline:14px}
+body:not(.workspace) .editor-content{padding:30px 19px 14px}
+body:not(.workspace) .title-input{font-size:29px;margin-bottom:19px}
+body:not(.workspace) .note-date{margin-bottom:16px}
+body:not(.workspace) .writing-toolbar{gap:2px}
+body:not(.workspace) .writing-toolbar button{min-width:26px;padding:4px 5px}
+body:not(.workspace) .editor-footer{padding-inline:15px}
+@media(max-width:350px){body:not(.workspace) .branding{font-size:19px}body:not(.workspace) .header-actions .icon-button{width:30px}body:not(.workspace) .capture-actions .quick-note-button{padding-inline:9px}}
+
+/* Full workspace is deliberately desktop-first, with flexible writer width. */
+.workspace .app{grid-template-columns:var(--sidebar-width,320px) 6px minmax(0,1fr)}
+.workspace .sidebar-top{height:69px}
+.workspace .capture-actions{margin:0 14px 12px;gap:7px;flex-direction:row}
+.workspace .capture-actions .create-button{flex:1;margin:0;min-width:0}
+.workspace .capture-actions .quick-note-button{margin:0;padding:0 12px;height:39px;flex:0 0 auto}
+.workspace .search-wrap{margin-bottom:11px}
+.workspace .editor-content{width:min(100%,960px);padding:clamp(35px,5vh,58px) clamp(26px,5vw,78px) 25px}
+.workspace .editor-toolbar{height:65px}
+.workspace .sidebar-resize{background:var(--divider)}
+.workspace.focus-mode .editor-content{width:min(100%,960px)}
+@media(max-width:700px){.workspace .sidebar,.workspace .editor-area{width:100%;height:100dvh}.workspace .editor-content{padding:30px 19px 14px}.workspace .capture-actions{flex-direction:row}.workspace .back-button{display:grid}}
+
+/* 2.0.1: preserve visible keyboard focus for editable writing fields. */
+.title-input:focus-visible,.body-input:focus-visible{outline:var(--focus-width) solid var(--accent);outline-offset:3px;border-radius:3px}
+
+/* Notely identity v2.0.3: the brand mark is an SVG asset, not a generic note glyph. */
+.brand-icon{background:transparent;color:inherit;border-radius:10px;overflow:hidden;flex:0 0 32px}
+.brand-icon img{display:block;width:32px;height:32px;object-fit:contain}
+.branding{gap:10px;letter-spacing:-.8px}
+/* P1 Responsive & UX: viewport-safe flex tracks, narrow side panel, dialog access. */
+html,body,.app,.sidebar,.editor-area,.editor,.editor-content{min-height:0}
+.sidebar,.editor-area,.editor-content,.sidebar-footer,.toolbar-actions{min-width:0}
+.sidebar-top,.editor-toolbar,.sidebar-footer{flex-shrink:0}
+.editor-content{max-width:100%}
+.title-input,.body-input{max-width:100%}
+.editor-toolbar .toolbar-actions{flex-wrap:nowrap}
+.editor-footer{min-width:0;gap:7px}
+.editor-footer .save-status{min-width:0;overflow-wrap:anywhere}
+.editor-footer .word-count{white-space:nowrap}
+.sidebar-footer{flex-wrap:wrap;row-gap:5px}
+.sidebar-footer .save-status{flex:1 1 auto}
+.sidebar-footer .backup-link{margin-left:auto}
+.workspace .app,.workspace .sidebar,.workspace .editor-area{min-width:0}
+.workspace .sidebar-resize::before{content:"";position:absolute;inset:0 -4px}
+.workspace .sidebar-resize:focus-visible{outline:var(--focus-width) solid var(--accent);outline-offset:-2px}
+.focus-toggle:disabled{opacity:.45;cursor:not-allowed}
+@media(max-width:700px){
+  .workspace .app{display:block;grid-template-columns:none}
+  .workspace .sidebar-resize{display:none}
+  .workspace .sidebar,.workspace .editor-area{max-width:100%;height:100dvh}
+}
+@media(max-width:340px){
+  .sidepanel .editor-toolbar,.sidepanel .editor-footer{padding-inline:10px;gap:4px}
+  .sidepanel .editor-location{font-size:9px;letter-spacing:0}
+  .sidepanel .toolbar-actions{gap:1px}
+  .sidepanel .toolbar-actions .icon-button{width:30px;height:34px}
+  .sidepanel .editor-content{padding-inline:12px}
+  .sidepanel .sidebar-footer{padding-inline:10px}
+}
+@media(max-height:450px){
+  .sidebar-top{height:52px}
+  .editor-toolbar{height:50px}
+  .sidebar-footer,.editor-footer{padding-block:5px;height:auto;min-height:43px}
+  .editor-content{padding-top:12px}
+  .title-input{margin-bottom:10px}
+  .backup-dialog{max-height:calc(100dvh - 16px)}
+}
+@media(prefers-reduced-motion:reduce){.workspace .sidebar-resize,.focus-toggle{transition:none!important}}
+
+/* Production component foundation. Theme colors are defined by design-tokens.css. */
+.icon-button { transition-duration:var(--duration-normal); }
+.search-wrap { transition-duration:var(--duration-normal); }
+.create-button, .quick-note-button { min-height:var(--control-lg); }
+.search-wrap { min-height:var(--control-md); }
+.brand-icon, .brand-icon img { width:32px; height:32px; }
+@media (prefers-reduced-motion: reduce) {
+  .icon-button, .search-wrap, .create-button, .quick-note-button { transition-duration:0ms; }
+}
+
+/* v2.0.6: canonical interactive component states, shared by all three surfaces. */
+:where(.create-button,.quick-note-button,.empty-create,.backup-primary,.backup-link,.filter-toggle,.filter-disclosure>summary,.focus-toggle,.retry-button,.undo-button,.recovery-actions button,.writing-toolbar button,.icon-button):disabled {
+  cursor:not-allowed;
+  opacity:.48;
+}
+:where(.create-button,.quick-note-button,.empty-create,.backup-primary,.filter-toggle,.filter-disclosure>summary,.focus-toggle,.retry-button,.undo-button,.recovery-actions button,.writing-toolbar button,.icon-button):focus-visible {
+  outline:var(--focus-width) solid var(--accent);
+  outline-offset:2px;
+}
+:where(.quick-note-button,.backup-link,.filter-toggle,.focus-toggle,.retry-button,.undo-button,.recovery-actions button):hover:not(:disabled) {
+  background:var(--surface-hover);
+  color:var(--text);
+}
+:where(.filter-field select,.tag-entry input,.backup-dialog input[type="file"],.backup-dialog select) {
+  border-radius:var(--radius-sm);
+}
+.note-card.active:hover {background:var(--selected);}
+.writing-toolbar button[aria-pressed="true"] {background:var(--selected);color:var(--text);}
+@media (prefers-reduced-motion:reduce) {
+  :where(button,input,textarea,select,.note-card,.filter-chevron,.search-wrap) {transition-duration:0ms!important;}
+}
+
+/* v2.0.7: shared visual rhythm; deliberately preserve existing DOM and interactions. */
+:is(.sidebar,.editor-area,dialog){font-size:var(--text-base);line-height:var(--leading-normal)}
+:is(.library-label,.section-label,.editor-location,.note-date){font-size:var(--text-xs);line-height:var(--leading-tight);letter-spacing:.065em}
+:is(.note-card-title){font-size:var(--text-base);line-height:var(--leading-tight);font-weight:var(--weight-semibold)}
+:is(.note-card-preview,.note-card-meta,.notes-count,.sidebar-footer,.backup-link){font-size:var(--text-sm);line-height:var(--leading-normal)}
+:is(.search-wrap input,.filter-field select,.tag-entry input){font-size:var(--text-sm);line-height:var(--leading-normal)}
+:is(.create-button,.quick-note-button,.empty-create,.backup-primary){font-size:var(--text-sm);font-weight:var(--weight-semibold)}
+:is(.writing-toolbar button,.filter-toggle,.filter-disclosure>summary){font-size:var(--text-sm)}
+:is(.title-input){font-size:clamp(28px,3vw,37px);line-height:1.2}
+:is(.body-input,.markdown-preview){font-size:var(--text-editor);line-height:var(--leading-reading)}
+:is(.editor-empty p,dialog p,.backup-dialog p){font-size:var(--text-sm);line-height:var(--leading-normal)}
+:is(.sidebar-footer,.editor-footer){gap:var(--component-gap)}
+:is(.note-card,.search-wrap,.tag-chip,.writing-toolbar button){border-radius:var(--radius-md)}
+:is(.dialog-buttons button,.backup-primary){min-height:var(--control-md)}
+:is(.note-card){padding:var(--space-3);margin-bottom:var(--space-1)}
+:is(.note-card-preview){margin-top:var(--space-1)}
+:is(.note-card-meta){margin-top:var(--space-2)}
+:is(.writing-toolbar){column-gap:var(--space-1);row-gap:var(--space-1)}
+:is(.search-wrap,.editor-toolbar){min-width:0}
+:is(.editor-toolbar .toolbar-actions){min-width:0}
+:is(.dialog-buttons){flex-wrap:wrap}
+:is(.save-status,.note-card-title,.note-card-preview){min-width:0}
+@media(max-width:340px){
+  :is(.note-card){padding:var(--space-2) var(--space-3)}
+  :is(.note-card-meta,.sidebar-footer,.backup-link){font-size:var(--text-xs)}
+  :is(.writing-toolbar button){font-size:var(--text-xs)}
+}
+@media(prefers-reduced-motion:reduce){
+  :is(button,.note-card,.search-wrap,.writing-toolbar button){transition:none!important}
+}
+/* Workspace must override the global popup .app display rule at desktop widths. */
+@media(min-width:701px){.workspace:not(.focus-mode) .app{display:grid;width:100%;max-width:none;height:100dvh;grid-template-columns:var(--sidebar-width,320px) 6px minmax(0,1fr)}}
+@media(max-width:700px){.workspace .app{display:block;width:100%;max-width:none;height:100dvh}}
+
+/* v2.0.8: cross-surface finishing details. Intentionally no structural layout changes. */
+:where(.sidebar-top,.editor-toolbar,.sidebar-footer,.editor-footer){column-gap:var(--space-2)}
+:where(.create-button,.quick-note-button,.empty-create,.backup-primary){border-radius:var(--radius-md)}
+:where(.search-wrap,.filter-field select,.tag-entry input,.backup-dialog input[type="file"],.backup-dialog select){border-radius:var(--radius-md)}
+:where(.note-card.active){background:var(--selected);border-color:var(--border)}
+:where(.note-card:focus-visible,.writing-toolbar button:focus-visible,.icon-button:focus-visible){outline:var(--focus-width) solid var(--accent);outline-offset:2px}
+:where(.backup-dialog,.confirm-dialog){color:var(--text)}
+:where(.brand-icon img){display:block;object-fit:contain}
+@media(prefers-reduced-motion:reduce){:where(.note-card,.icon-button,.create-button,.quick-note-button,.backup-primary){transition:none!important}}
+
+
+/* v2.0.19 — bounded, cross-surface refinement. Preserve existing markup and event handlers. */
+/* Sidebar buttons remain distinct and readable in narrow Chrome side panels. */
+.sidepanel .sidebar-footer{column-gap:var(--space-2);row-gap:var(--space-2);align-content:center}
+.sidepanel .sidebar-footer .save-status{flex:1 0 100%;min-width:0}
+.sidepanel .sidebar-footer .support-open{margin-left:0}
+.sidepanel .sidebar-footer .backup-link{margin-left:0}
+.sidepanel .sidebar-footer .backup-link:focus-visible,
+.sidebar-footer .support-open:focus-visible{outline:var(--focus-width) solid var(--accent);outline-offset:2px;border-radius:var(--radius-sm)}
+/* Focus visible when keyboard navigating the note list; no perpetual effects. */
+.note-card:focus-visible{position:relative;z-index:1;outline:var(--focus-width) solid var(--accent);outline-offset:-2px}
+/* Keep the writer readable when the desktop layout first becomes two-column. */
+@media(min-width:701px) and (max-width:900px){
+  .workspace:not(.focus-mode) .app{grid-template-columns:min(var(--sidebar-width,340px), calc(100vw - 390px)) 6px minmax(0,1fr)}
+  .workspace .editor-toolbar{padding-inline:var(--space-3)}
+  .workspace .editor-content{padding-inline:var(--space-5)}
+  .workspace .title-input{font-size:clamp(25px,3.5vw,32px)}
+}
+/* Editing controls keep a minimum target size and their own scrolling track when space runs out. */
+.writing-toolbar{min-width:0;max-width:100%;overflow-x:auto;overscroll-behavior-inline:contain;scrollbar-width:thin}
+.writing-toolbar button{flex-shrink:0}
+@media(prefers-reduced-motion:reduce){
+  .note-card,.sidebar-footer .backup-link{transition:none!important}
+}

@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="light dark" />
+  <title>Notely</title>
+  <link rel="stylesheet" href="design-tokens.css" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="motion.css" />
+  <script type="module" src="panel.js"></script>
+</head>
+<body data-theme="dark">
+  <svg class="svg-defs" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="10.8" cy="10.8" r="6.5"/><path d="m16 16 4.2 4.2"/></symbol>
+    <symbol id="i-note" viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="3"/><path d="M8 8h8M8 12h8M8 16h5"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="m16 3 5 5-3 1-3.3 3.3.3 4-1.7 1.7-4-4L4 20l5.3-5.3-4-4L7 9l4 .3L14.4 6z"/></symbol>
+    <symbol id="i-trash" viewBox="0 0 24 24"><path d="M4 7h16M9 7V4h6v3M7 7l1 13h8l1-13M10 11v5M14 11v5"/></symbol>
+    <symbol id="i-back" viewBox="0 0 24 24"><path d="m14.5 5-7 7 7 7"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M2 12h2m16 0h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20.5 14.2A8.5 8.5 0 0 1 9.8 3.5 8.5 8.5 0 1 0 20.5 14.2Z"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4.5 4.5L19 7"/></symbol>
+    <symbol id="i-more" viewBox="0 0 24 24"><circle cx="5" cy="12" r="1"/><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/></symbol>
+  </svg>
+  <div class="app" id="app" data-view="list">
+    <aside class="sidebar" aria-label="Notes navigation">
+      <header class="sidebar-top">
+        <div class="branding"><span class="brand-icon"><img src="brand/mark.svg" width="32" height="32" alt="" aria-hidden="true" /></span><span>notely<span class="brand-period">.</span></span></div>
+        <button class="icon-button theme-button" id="theme-button" type="button" title="Toggle theme" aria-label="Toggle theme"><svg><use href="#i-sun"/></svg></button>
+      </header>
+      <div class="library-label"><span>YOUR SPACE</span><span class="notes-count" id="notes-count">0 notes</span></div>
+      <button class="create-button" id="new-note" type="button"><svg><use href="#i-plus"/></svg>New note <span class="shortcut">Ctrl N</span></button>
+      <label class="search-wrap" for="search"><svg><use href="#i-search"/></svg><input id="search" placeholder="Search your notes" autocomplete="off" spellcheck="false" /><span class="search-key">/</span></label>
+      <div class="section-label">ALL NOTES <span id="filtered-count"></span></div>
+      <div class="note-list" id="note-list" role="list" aria-label="Your notes"></div>
+      <footer class="sidebar-footer"><span class="privacy-dot"></span>Saved locally on this device</footer>
+    </aside>
+    <main class="editor-area" id="editor-area">
+      <div class="editor-empty" id="editor-empty"><div class="empty-illustration"><svg><use href="#i-note"/></svg></div><h1>Room for your thoughts.</h1><p>A simple place to capture ideas, plans, and everything in between.</p><button class="empty-create" id="empty-create" type="button"><svg><use href="#i-plus"/></svg> Create your first note</button></div>
+      <section class="editor" id="editor" aria-label="Note editor" hidden>
+        <div class="editor-toolbar"><button class="icon-button back-button" id="back-button" type="button" aria-label="Back to notes"><svg><use href="#i-back"/></svg></button><span class="editor-location">MY NOTES <span>/</span> EDITOR</span><div class="toolbar-actions"><button class="icon-button" id="pin-button" type="button" title="Pin note" aria-label="Pin note" aria-pressed="false"><svg><use href="#i-pin"/></svg></button><button class="icon-button trash-button" id="delete-button" type="button" title="Delete note" aria-label="Delete note"><svg><use href="#i-trash"/></svg></button></div></div>
+        <div class="editor-content"><div class="note-date" id="note-date"></div><input class="title-input" id="title-input" placeholder="Untitled note" maxlength="120" aria-label="Note title" /><textarea class="body-input" id="body-input" placeholder="Start writing something..." maxlength="100000" aria-label="Note content" spellcheck="true"></textarea></div>
+        <footer class="editor-footer"><div class="save-status" id="save-status" role="status"><svg><use href="#i-check"/></svg><span>Saved</span></div><div class="word-count" id="word-count">0 words</div></footer>
+      </section>
+    </main>
+  </div>
+  <dialog id="confirm-dialog" aria-labelledby="confirm-title"><form method="dialog"><h2 id="confirm-title">Delete this note?</h2><p>This action cannot be undone.</p><div class="dialog-buttons"><button type="submit" value="cancel" class="cancel-button">Cancel</button><button type="submit" value="delete" class="danger-button">Delete note</button></div></form></dialog>
+  <div id="notice" class="notice" role="alert" hidden></div>
+</body>
+</html>

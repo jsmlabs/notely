@@ -1,0 +1,6 @@
+PASS viewport 400x740: columns=none; editor y=0; overflow=False
+PASS viewport 700x800: columns=none; editor y=0; overflow=False
+PASS viewport 701x800: columns=340px 6px 355px; editor y=0; overflow=False
+PASS viewport 1024x768: columns=340px 6px 678px; editor y=0; overflow=False
+PASS viewport 1440x900: columns=340px 6px 1094px; editor y=0; overflow=False
+PASS viewport 1700x950: columns=340px 6px 1354px; editor y=0; overflow=False

@@ -1,0 +1,37 @@
+{
+  "manifest_version": 3,
+  "name": "Notely - Clean Notes",
+  "version": "2.1.3",
+  "description": "Private notes with Markdown, backups and quick capture from Chrome pages.",
+  "minimum_chrome_version": "116",
+  "permissions": [
+    "storage",
+    "contextMenus",
+    "sidePanel"
+  ],
+  "action": {
+    "default_title": "Open Notely",
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "commands": {
+    "quick-note": {
+      "description": "Create a new quick note in Notely",
+      "suggested_key": {
+        "default": "Ctrl+Shift+9"
+      }
+    }
+  },
+  "side_panel": {
+    "default_path": "sidepanel.html"
+  }
+}

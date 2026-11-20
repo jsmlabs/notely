@@ -1,0 +1,716 @@
+
+> notely-clean-notes@2.0.17 test
+> node --test tests/*.test.mjs
+
+TAP version 13
+# Subtest: onInstalled registers selection-only context menu
+ok 1 - onInstalled registers selection-only context menu
+  ---
+  duration_ms: 1.818071
+  type: 'test'
+  ...
+# Subtest: worker messaging writes and reads legacy storage key
+ok 2 - worker messaging writes and reads legacy storage key
+  ---
+  duration_ms: 1.222553
+  type: 'test'
+  ...
+# Subtest: capture context event adds note while preserving existing note
+ok 3 - capture context event adds note while preserving existing note
+  ---
+  duration_ms: 6.563124
+  type: 'test'
+  ...
+# Subtest: shortcut event creates separate blank note without replacing prior notes
+ok 4 - shortcut event creates separate blank note without replacing prior notes
+  ---
+  duration_ms: 0.878965
+  type: 'test'
+  ...
+# Subtest: invalid message cannot write and unknown message does not trigger reply
+ok 5 - invalid message cannot write and unknown message does not trigger reply
+  ---
+  duration_ms: 0.148904
+  type: 'test'
+  ...
+# Subtest: versioned JSON roundtrip retains every field including Markdown and flags
+ok 6 - versioned JSON roundtrip retains every field including Markdown and flags
+  ---
+  duration_ms: 1.806794
+  type: 'test'
+  ...
+# Subtest: rejects malformed, unknown and oversized backup without modifying originals
+ok 7 - rejects malformed, unknown and oversized backup without modifying originals
+  ---
+  duration_ms: 95.633199
+  type: 'test'
+  ...
+# Subtest: rejects duplicate IDs and invalid note fields rather than truncating data
+ok 8 - rejects duplicate IDs and invalid note fields rather than truncating data
+  ---
+  duration_ms: 4.332171
+  type: 'test'
+  ...
+# Subtest: merge keeps existing IDs intact, skips conflicts and adds only new notes
+ok 9 - merge keeps existing IDs intact, skips conflicts and adds only new notes
+  ---
+  duration_ms: 0.465702
+  type: 'test'
+  ...
+# Subtest: replace is a pure plan; changes become active only after successful persistence
+ok 10 - replace is a pure plan; changes become active only after successful persistence
+  ---
+  duration_ms: 0.202475
+  type: 'test'
+  ...
+# Subtest: single-note Markdown and TXT export preserve exact body and safe filename
+ok 11 - single-note Markdown and TXT export preserve exact body and safe filename
+  ---
+  duration_ms: 0.388977
+  type: 'test'
+  ...
+# Subtest: persistImport waits for writes and only returns a committed snapshot
+ok 12 - persistImport waits for writes and only returns a committed snapshot
+  ---
+  duration_ms: 0.660105
+  type: 'test'
+  ...
+# Subtest: failed import does not adopt imported notes and reasserts previous snapshot
+ok 13 - failed import does not adopt imported notes and reasserts previous snapshot
+  ---
+  duration_ms: 0.592032
+  type: 'test'
+  ...
+# Subtest: failed current save rejects import without overwriting data
+ok 14 - failed current save rejects import without overwriting data
+  ---
+  duration_ms: 0.538111
+  type: 'test'
+  ...
+# Subtest: brand icon exports are real PNGs in canonical dimensions
+ok 15 - brand icon exports are real PNGs in canonical dimensions
+  ---
+  duration_ms: 7.580979
+  type: 'test'
+  ...
+# Subtest: store art has required dimensions and is not mislabeled as screenshots
+ok 16 - store art has required dimensions and is not mislabeled as screenshots
+  ---
+  duration_ms: 3.586316
+  type: 'test'
+  ...
+# Subtest: all production views share the same icon and brand tokens
+ok 17 - all production views share the same icon and brand tokens
+  ---
+  duration_ms: 4.641107
+  type: 'test'
+  ...
+# Subtest: desktop workspace grid contains sidebar, resize handle and editor tracks
+ok 18 - desktop workspace grid contains sidebar, resize handle and editor tracks
+  ---
+  duration_ms: 1.841596
+  type: 'test'
+  ...
+# Subtest: manifest icons are actual square PNGs in declared sizes
+ok 19 - manifest icons are actual square PNGs in declared sizes
+  ---
+  duration_ms: 6.569904
+  type: 'test'
+  ...
+# Subtest: all three entrypoints reference the same brand mark
+ok 20 - all three entrypoints reference the same brand mark
+  ---
+  duration_ms: 5.444497
+  type: 'test'
+  ...
+# Subtest: capture and stale popup edit preserve independent notes even when scheduled together
+ok 21 - capture and stale popup edit preserve independent notes even when scheduled together
+  ---
+  duration_ms: 2.907614
+  type: 'test'
+  ...
+# Subtest: two stale edits on the same note reject conflict without data loss
+ok 22 - two stale edits on the same note reject conflict without data loss
+  ---
+  duration_ms: 1.141971
+  type: 'test'
+  ...
+# Subtest: deleting an old note does not delete a new capture from stale base
+ok 23 - deleting an old note does not delete a new capture from stale base
+  ---
+  duration_ms: 1.284526
+  type: 'test'
+  ...
+# Subtest: storage failure preserves old notes; captures are not acknowledged
+ok 24 - storage failure preserves old notes; captures are not acknowledged
+  ---
+  duration_ms: 1.342073
+  type: 'test'
+  ...
+# Subtest: replace refuses captures arriving since preview; merge includes them
+ok 25 - replace refuses captures arriving since preview; merge includes them
+  ---
+  duration_ms: 1.10776
+  type: 'test'
+  ...
+# Subtest: source attribution is optional and URL schemes restricted
+ok 26 - source attribution is optional and URL schemes restricted
+  ---
+  duration_ms: 0.628758
+  type: 'test'
+  ...
+# Subtest: source metadata survives a version 1 backup roundtrip
+ok 27 - source metadata survives a version 1 backup roundtrip
+  ---
+  duration_ms: 1.052317
+  type: 'test'
+  ...
+# Subtest: resetting queue after authoritative restore prevents a stale retry
+ok 28 - resetting queue after authoritative restore prevents a stale retry
+  ---
+  duration_ms: 0.932656
+  type: 'test'
+  ...
+# Subtest: create and update notes without mutating previous state
+ok 29 - create and update notes without mutating previous state
+  ---
+  duration_ms: 1.216825
+  type: 'test'
+  ...
+# Subtest: noop updates preserve timestamp
+ok 30 - noop updates preserve timestamp
+  ---
+  duration_ms: 0.196857
+  type: 'test'
+  ...
+# Subtest: sort pinned first, then updated; search title and body case-insensitively
+ok 31 - sort pinned first, then updated; search title and body case-insensitively
+  ---
+  duration_ms: 0.310868
+  type: 'test'
+  ...
+# Subtest: invalid stored entries are dropped, duplicates removed, malformed fields normalized
+ok 32 - invalid stored entries are dropped, duplicates removed, malformed fields normalized
+  ---
+  duration_ms: 0.243387
+  type: 'test'
+  ...
+# Subtest: storage note ceiling is bounded
+ok 33 - storage note ceiling is bounded
+  ---
+  duration_ms: 2.430574
+  type: 'test'
+  ...
+# Subtest: note title fallback and word count
+ok 34 - note title fallback and word count
+  ---
+  duration_ms: 0.196055
+  type: 'test'
+  ...
+# Subtest: stored notes normalize out-of-range and noninteger dates into displayable timestamps
+ok 35 - stored notes normalize out-of-range and noninteger dates into displayable timestamps
+  ---
+  duration_ms: 39.69842
+  type: 'test'
+  ...
+# Subtest: backup rejects impossible dates without silently modifying existing notes
+ok 36 - backup rejects impossible dates without silently modifying existing notes
+  ---
+  duration_ms: 1.175973
+  type: 'test'
+  ...
+# Subtest: source URLs use identical parsing rules in capture, stored notes and backups
+ok 37 - source URLs use identical parsing rules in capture, stored notes and backups
+  ---
+  duration_ms: 1.248433
+  type: 'test'
+  ...
+# Subtest: three entrypoints load shared tokens ahead of application styles
+ok 38 - three entrypoints load shared tokens ahead of application styles
+  ---
+  duration_ms: 6.181319
+  type: 'test'
+  ...
+# Subtest: active semantic colors resolve to defined primitive tokens for both themes
+ok 39 - active semantic colors resolve to defined primitive tokens for both themes
+  ---
+  duration_ms: 2.844038
+  type: 'test'
+  ...
+# Subtest: foundation spacing and motion scales are positive and strictly increasing
+ok 40 - foundation spacing and motion scales are positive and strictly increasing
+  ---
+  duration_ms: 2.445677
+  type: 'test'
+  ...
+# Subtest: full receiving address is present in both views, without truncating its readable copy
+ok 41 - full receiving address is present in both views, without truncating its readable copy
+  ---
+  duration_ms: 2.839621
+  type: 'test'
+  ...
+# Subtest: clipboard completion after closing and reopening must not change new session
+ok 42 - clipboard completion after closing and reopening must not change new session
+  ---
+  duration_ms: 1.416776
+  type: 'test'
+  ...
+# Subtest: copy success and clipboard failure provide accurate feedback
+ok 43 - copy success and clipboard failure provide accurate feedback
+  ---
+  duration_ms: 1.122412
+  type: 'test'
+  ...
+# Subtest: both actual extension views contain a voluntary USDC Solana donation dialog
+ok 44 - both actual extension views contain a voluntary USDC Solana donation dialog
+  ---
+  duration_ms: 3.634639
+  type: 'test'
+  ...
+# Subtest: donation interaction is local and copy failures are recoverable
+ok 45 - donation interaction is local and copy failures are recoverable
+  ---
+  duration_ms: 0.342006
+  type: 'test'
+  ...
+# Subtest: assets are included and permissions unchanged
+ok 46 - assets are included and permissions unchanged
+  ---
+  duration_ms: 0.876
+  type: 'test'
+  ...
+# Subtest: recovery only offers uncommitted drafts, ordered newest first
+ok 47 - recovery only offers uncommitted drafts, ordered newest first
+  ---
+  duration_ms: 1.984632
+  type: 'test'
+  ...
+# Subtest: recovery creates an independent copy without changing existing note
+ok 48 - recovery creates an independent copy without changing existing note
+  ---
+  duration_ms: 1.234151
+  type: 'test'
+  ...
+# Subtest: separate editor sessions do not overwrite each other; successful save clears only own journal
+ok 49 - separate editor sessions do not overwrite each other; successful save clears only own journal
+  ---
+  duration_ms: 0.595437
+  type: 'test'
+  ...
+# Subtest: acknowledgement cannot erase a newer queued edit
+ok 50 - acknowledgement cannot erase a newer queued edit
+  ---
+  duration_ms: 1.16111
+  type: 'test'
+  ...
+# Subtest: failed draft write remains surfaced and next write can recover
+ok 51 - failed draft write remains surfaced and next write can recover
+  ---
+  duration_ms: 0.500534
+  type: 'test'
+  ...
+# Subtest: a failed recovery save can retry without creating additional notes
+ok 52 - a failed recovery save can retry without creating additional notes
+  ---
+  duration_ms: 0.19923
+  type: 'test'
+  ...
+# Subtest: preview snapshot is isolated from later mutations and detect changes
+ok 53 - preview snapshot is isolated from later mutations and detect changes
+  ---
+  duration_ms: 1.077123
+  type: 'test'
+  ...
+# Subtest: destructive import refuses a capture that happened after preview
+ok 54 - destructive import refuses a capture that happened after preview
+  ---
+  duration_ms: 2.652418
+  type: 'test'
+  ...
+# Subtest: unchanged preview permits replacement
+ok 55 - unchanged preview permits replacement
+  ---
+  duration_ms: 0.892396
+  type: 'test'
+  ...
+# Subtest: a slow previous backup cannot replace the latest selection
+ok 56 - a slow previous backup cannot replace the latest selection
+  ---
+  duration_ms: 1.946283
+  type: 'test'
+  ...
+# Subtest: clearing a selection invalidates pending reads and stale errors
+ok 57 - clearing a selection invalidates pending reads and stale errors
+  ---
+  duration_ms: 0.233442
+  type: 'test'
+  ...
+# Subtest: current invalid backup still surfaces an actionable parse error
+ok 58 - current invalid backup still surfaces an actionable parse error
+  ---
+  duration_ms: 0.507666
+  type: 'test'
+  ...
+# Subtest: Markdown parser handles heading, list, code, checklist and plaintext consistently
+ok 59 - Markdown parser handles heading, list, code, checklist and plaintext consistently
+  ---
+  duration_ms: 1.470917
+  type: 'test'
+  ...
+# Subtest: Links accept http/https only, rejecting script and data schemes
+ok 60 - Links accept http/https only, rejecting script and data schemes
+  ---
+  duration_ms: 0.420945
+  type: 'test'
+  ...
+# Subtest: Checklist toggle preserves all non-target lines, and rejects arbitrary line
+ok 61 - Checklist toggle preserves all non-target lines, and rejects arbitrary line
+  ---
+  duration_ms: 0.280302
+  type: 'test'
+  ...
+# Subtest: Formatting preserves selected text and returns focused cursor range
+ok 62 - Formatting preserves selected text and returns focused cursor range
+  ---
+  duration_ms: 0.800196
+  type: 'test'
+  ...
+# Subtest: Legacy notes remain byte-for-byte editable with Markdown body text and no extra fields
+ok 63 - Legacy notes remain byte-for-byte editable with Markdown body text and no extra fields
+  ---
+  duration_ms: 0.374314
+  type: 'test'
+  ...
+# Subtest: Renderer uses only DOM creation/textContent - raw HTML never becomes elements
+ok 64 - Renderer uses only DOM creation/textContent - raw HTML never becomes elements
+  ---
+  duration_ms: 0.705013
+  type: 'test'
+  ...
+# Subtest: all surfaces load event-driven CSS after foundational styles
+ok 65 - all surfaces load event-driven CSS after foundational styles
+  ---
+  duration_ms: 2.479468
+  type: 'test'
+  ...
+# Subtest: motion is finite, respects reduced motion and avoids persistent rendering layers
+ok 66 - motion is finite, respects reduced motion and avoids persistent rendering layers
+  ---
+  duration_ms: 0.479944
+  type: 'test'
+  ...
+# Subtest: shared motion tokens and package versions are consistent
+ok 67 - shared motion tokens and package versions are consistent
+  ---
+  duration_ms: 0.474846
+  type: 'test'
+  ...
+# Subtest: empty-state entrance only runs in the visible editor view
+ok 68 - empty-state entrance only runs in the visible editor view
+  ---
+  duration_ms: 0.306212
+  type: 'test'
+  ...
+# Subtest: keyboard navigation moves across notes with bounded indices
+ok 69 - keyboard navigation moves across notes with bounded indices
+  ---
+  duration_ms: 0.624632
+  type: 'test'
+  ...
+# Subtest: Home and End access list boundaries and empty lists are safe
+ok 70 - Home and End access list boundaries and empty lists are safe
+  ---
+  duration_ms: 0.108013
+  type: 'test'
+  ...
+# Subtest: popup exposes reset and correct semantic list keyboard hooks
+ok 71 - popup exposes reset and correct semantic list keyboard hooks
+  ---
+  duration_ms: 6.439387
+  type: 'test'
+  ...
+# Subtest: preserves focused note by stable id after reorder
+ok 72 - preserves focused note by stable id after reorder
+  ---
+  duration_ms: 1.634504
+  type: 'test'
+  ...
+# Subtest: focus falls to adjacent surviving note when focused item disappears
+ok 73 - focus falls to adjacent surviving note when focused item disappears
+  ---
+  duration_ms: 0.188444
+  type: 'test'
+  ...
+# Subtest: external focus is never stolen by rerender
+ok 74 - external focus is never stolen by rerender
+  ---
+  duration_ms: 0.144568
+  type: 'test'
+  ...
+# Subtest: empty filtered list does not attempt invalid focus
+ok 75 - empty filtered list does not attempt invalid focus
+  ---
+  duration_ms: 1.015211
+  type: 'test'
+  ...
+# Subtest: v1.2 persisted notes load without losing content, timestamps or pins
+ok 76 - v1.2 persisted notes load without losing content, timestamps or pins
+  ---
+  duration_ms: 2.84568
+  type: 'test'
+  ...
+# Subtest: tags deduplicate case-insensitively, reject malformed values, and enforce caps
+ok 77 - tags deduplicate case-insensitively, reject malformed values, and enforce caps
+  ---
+  duration_ms: 0.489919
+  type: 'test'
+  ...
+# Subtest: tags can be added, renamed, removed and favorite toggles independently of pinned
+ok 78 - tags can be added, renamed, removed and favorite toggles independently of pinned
+  ---
+  duration_ms: 0.41843
+  type: 'test'
+  ...
+# Subtest: repeated equivalent tag updates do not change timestamp
+ok 79 - repeated equivalent tag updates do not change timestamp
+  ---
+  duration_ms: 0.290287
+  type: 'test'
+  ...
+# Subtest: field-specific searching and tag/favorite filters combine with AND semantics
+ok 80 - field-specific searching and tag/favorite filters combine with AND semantics
+  ---
+  duration_ms: 0.753176
+  type: 'test'
+  ...
+# Subtest: sorting orders by update, creation and title with pinned first and stable id ties
+ok 81 - sorting orders by update, creation and title with pinned first and stable id ties
+  ---
+  duration_ms: 7.755232
+  type: 'test'
+  ...
+# Subtest: allTags returns unique case-insensitive sorted choices
+ok 82 - allTags returns unique case-insensitive sorted choices
+  ---
+  duration_ms: 0.538332
+  type: 'test'
+  ...
+# Subtest: popup and side panel keep both capture actions and native collapsible filters
+ok 83 - popup and side panel keep both capture actions and native collapsible filters
+  ---
+  duration_ms: 8.747126
+  type: 'test'
+  ...
+# Subtest: compact notes-first styles apply outside workspace only
+ok 84 - compact notes-first styles apply outside workspace only
+  ---
+  duration_ms: 1.673333
+  type: 'test'
+  ...
+# Subtest: shared theme tokens and redesigned surfaces cover all three UI modes
+ok 85 - shared theme tokens and redesigned surfaces cover all three UI modes
+  ---
+  duration_ms: 5.224166
+  type: 'test'
+  ...
+# Subtest: workspace empty state differentiates empty library from unselected existing notes
+ok 86 - workspace empty state differentiates empty library from unselected existing notes
+  ---
+  duration_ms: 1.32018
+  type: 'test'
+  ...
+# Subtest: P1 layout keeps a single-view side panel and the 700/701 workspace boundary
+ok 87 - P1 layout keeps a single-view side panel and the 700/701 workspace boundary
+  ---
+  duration_ms: 4.602027
+  type: 'test'
+  ...
+# Subtest: P1 list rendering retains scroll during edits, resets when search changes
+ok 88 - P1 list rendering retains scroll during edits, resets when search changes
+  ---
+  duration_ms: 1.230375
+  type: 'test'
+  ...
+# Subtest: P1 focus mode requires an active note and restores keyboard context
+ok 89 - P1 focus mode requires an active note and restores keyboard context
+  ---
+  duration_ms: 1.620754
+  type: 'test'
+  ...
+# Subtest: P1 resizer exposes effective bounds and releases capture on drag completion
+ok 90 - P1 resizer exposes effective bounds and releases capture on drag completion
+  ---
+  duration_ms: 0.766896
+  type: 'test'
+  ...
+# Subtest: P1 narrow screen controls and dialogs stay viewport safe
+ok 91 - P1 narrow screen controls and dialogs stay viewport safe
+  ---
+  duration_ms: 0.71625
+  type: 'test'
+  ...
+# Subtest: side panel opens for active browser window with minimal API arguments
+ok 92 - side panel opens for active browser window with minimal API arguments
+  ---
+  duration_ms: 1.560202
+  type: 'test'
+  ...
+# Subtest: side panel fails safely when Chrome API or active tab is unavailable
+ok 93 - side panel fails safely when Chrome API or active tab is unavailable
+  ---
+  duration_ms: 1.212327
+  type: 'test'
+  ...
+# Subtest: side panel propagates browser API rejection for visible UI error handling
+ok 94 - side panel propagates browser API rejection for visible UI error handling
+  ---
+  duration_ms: 0.544521
+  type: 'test'
+  ...
+# Subtest: sidepanel manifest, UI and controller share the popup implementation
+ok 95 - sidepanel manifest, UI and controller share the popup implementation
+  ---
+  duration_ms: 7.276088
+  type: 'test'
+  ...
+# Subtest: only one write is active; later snapshots replace queued intermediate snapshots
+ok 96 - only one write is active; later snapshots replace queued intermediate snapshots
+  ---
+  duration_ms: 4.743141
+  type: 'test'
+  ...
+# Subtest: failed write retains snapshot for an explicit retry
+ok 97 - failed write retains snapshot for an explicit retry
+  ---
+  duration_ms: 0.658824
+  type: 'test'
+  ...
+# Subtest: failed old write cannot overwrite newest successful write
+ok 98 - failed old write cannot overwrite newest successful write
+  ---
+  duration_ms: 0.27877
+  type: 'test'
+  ...
+# Subtest: retry without a pending snapshot does nothing
+ok 99 - retry without a pending snapshot does nothing
+  ---
+  duration_ms: 0.113401
+  type: 'test'
+  ...
+# Subtest: support motion is bounded and respects reduced motion
+ok 100 - support motion is bounded and respects reduced motion
+  ---
+  duration_ms: 1.418218
+  type: 'test'
+  ...
+# Subtest: support close handles buttons and Escape with reduced-motion fallback and focus restoration
+ok 101 - support close handles buttons and Escape with reduced-motion fallback and focus restoration
+  ---
+  duration_ms: 0.512913
+  type: 'test'
+  ...
+# Subtest: compact support UI displays one selectable receiving address in both extension entry points
+ok 102 - compact support UI displays one selectable receiving address in both extension entry points
+  ---
+  duration_ms: 1.543918
+  type: 'test'
+  ...
+# Subtest: support modal is constrained to viewport and does not introduce animations or network requests
+ok 103 - support modal is constrained to viewport and does not introduce animations or network requests
+  ---
+  duration_ms: 1.26019
+  type: 'test'
+  ...
+# Subtest: legacy palette rules are removed and token aliases remain for each theme
+ok 104 - legacy palette rules are removed and token aliases remain for each theme
+  ---
+  duration_ms: 7.076248
+  type: 'test'
+  ...
+# Subtest: component states use shared tokens and include disabled, focus, selected
+ok 105 - component states use shared tokens and include disabled, focus, selected
+  ---
+  duration_ms: 1.399159
+  type: 'test'
+  ...
+# Subtest: shared component stylesheet and token file load identically in all entrypoints
+ok 106 - shared component stylesheet and token file load identically in all entrypoints
+  ---
+  duration_ms: 2.590154
+  type: 'test'
+  ...
+# Subtest: replace action passes captured preview baseline to coordinator
+ok 107 - replace action passes captured preview baseline to coordinator
+  ---
+  duration_ms: 0.882029
+  type: 'test'
+  ...
+# Subtest: theme toggle updates accessible name alongside tooltip
+ok 108 - theme toggle updates accessible name alongside tooltip
+  ---
+  duration_ms: 0.224488
+  type: 'test'
+  ...
+# Subtest: semantic typography and spacing tokens are centrally declared
+ok 109 - semantic typography and spacing tokens are centrally declared
+  ---
+  duration_ms: 4.17291
+  type: 'test'
+  ...
+# Subtest: shared note, editor, toolbar and dialog styles consume semantic tokens
+ok 110 - shared note, editor, toolbar and dialog styles consume semantic tokens
+  ---
+  duration_ms: 6.269692
+  type: 'test'
+  ...
+# Subtest: popup, side panel and full workspace use same token stylesheet before component CSS
+ok 111 - popup, side panel and full workspace use same token stylesheet before component CSS
+  ---
+  duration_ms: 4.560124
+  type: 'test'
+  ...
+# Subtest: real full-tab workspace contains exactly three sequential grid children
+ok 112 - real full-tab workspace contains exactly three sequential grid children
+  ---
+  duration_ms: 4.266892
+  type: 'test'
+  ...
+# Subtest: the last desktop workspace grid override reserves a real resize track
+ok 113 - the last desktop workspace grid override reserves a real resize track
+  ---
+  duration_ms: 1.307301
+  type: 'test'
+  ...
+# Subtest: full workspace overrides popup width on the document root without changing the popup limit
+ok 114 - full workspace overrides popup width on the document root without changing the popup limit
+  ---
+  duration_ms: 4.92839
+  type: 'test'
+  ...
+# Subtest: full workspace is opened as an internal extension tab without new permissions
+ok 115 - full workspace is opened as an internal extension tab without new permissions
+  ---
+  duration_ms: 6.864599
+  type: 'test'
+  ...
+# Subtest: workspace retains shared app and responsive list/editor views
+ok 116 - workspace retains shared app and responsive list/editor views
+  ---
+  duration_ms: 3.413396
+  type: 'test'
+  ...
+# Subtest: writing controls are present in both extension surfaces and use shared logic
+ok 117 - writing controls are present in both extension surfaces and use shared logic
+  ---
+  duration_ms: 4.540886
+  type: 'test'
+  ...
+1..117
+# tests 117
+# suites 0
+# pass 117
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 701.122724

@@ -1,0 +1,69 @@
+/* Notely 2.0.12 — motion is event-driven, finite and compositor-friendly.
+   Keep typing surfaces completely stationary to protect caret and selection. */
+:where(.create-button,.quick-note-button,.empty-create,.backup-primary,
+       .cancel-button,.danger-button,.filter-toggle,.focus-toggle,.retry-button,
+       .undo-button,.backup-link,.icon-button,.writing-toolbar button,
+       .filter-disclosure > summary,.clear-filters,.note-card) {
+  transition-property: background-color, border-color, color, opacity;
+  transition-duration: var(--motion-standard);
+  transition-timing-function: var(--motion-ease);
+}
+:where(.search-wrap,.filter-field select,.tag-entry input) {
+  transition: border-color var(--motion-fast) var(--motion-ease),
+              background-color var(--motion-fast) var(--motion-ease);
+}
+/* Selection is immediate semantically; highlight color alone transitions. */
+.note-card.active, .note-card[aria-current="true"] {
+  transition-duration: var(--motion-fast);
+}
+/* Never animate text input, scrolling, layout dimensions or the editor caret. */
+:where(.title-input,.body-input,.markdown-preview,.editor-content,.note-list,
+       .sidebar,.editor-area,.app,.sidebar-resize) {
+  animation: none;
+}
+/* These are one-shot entrances: no idle timers or background animation. */
+dialog[open] {
+  animation: notely-dialog-enter var(--motion-enter) var(--motion-ease) both;
+}
+.notice:not([hidden]), .recovery-banner:not([hidden]) {
+  animation: notely-feedback-enter var(--motion-enter) var(--motion-ease) both;
+}
+/* Do not start an entrance while the editor is hidden behind the compact list.
+   A workspace grid can display both regions independently of data-view. */
+@media (min-width: 701px) {
+.workspace:not(.focus-mode) .editor-empty:not([hidden]) .empty-illustration {
+  animation: notely-empty-enter var(--motion-enter) var(--motion-ease) both;
+}
+}
+
+
+@media (max-width: 700px) {
+.app[data-view="editor"] .editor-empty:not([hidden]) .empty-illustration {
+  animation: notely-empty-enter var(--motion-enter) var(--motion-ease) both;
+}
+}
+/* Desktop focus mode may hide the sidebar without hiding the editor. */
+@media (min-width: 701px) {
+.workspace.focus-mode .editor-empty:not([hidden]) .empty-illustration {
+  animation: notely-empty-enter var(--motion-enter) var(--motion-ease) both;
+}
+}
+@keyframes notely-dialog-enter {
+  from { opacity: 0; transform: translateY(5px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes notely-feedback-enter {
+  from { opacity: 0; transform: translateY(4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes notely-empty-enter {
+  from { opacity: .65; transform: translateY(3px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
